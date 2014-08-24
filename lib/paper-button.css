@@ -1,0 +1,76 @@
+[paper-button] {
+  display: inline-block;
+  position: relative;
+  border: 0;
+  background: transparent;
+  text-align: center;
+  font: inherit;
+  text-transform: uppercase;
+  outline: none;
+  border-radius: 3px;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+[paper-button].hover:hover {
+  background: #e4e4e4;
+}
+
+[paper-button][raisedButton] {
+  background: #dfdfdf;
+}
+
+[paper-button][raisedButton].hover:hover {
+  background: #d6d6d6;
+}
+
+[paper-button][disabled] {
+  background: #eaeaea !important;
+  color: #a8a8a8 !important;
+  cursor: auto;
+}
+
+[paper-button] [f-id=shadow-container] {
+  border-radius: inherit;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+[paper-button] [f-id=clip] {
+  position: relative;
+  border-radius: inherit;
+  overflow: hidden;
+}
+
+[paper-button] [f-id=ripple] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  color: #d1d1d1;
+  pointer-events: none;
+}
+
+[paper-button][raisedButton] [f-id=ripple] {
+  color: #cecece;
+}
+
+[paper-button] [f-id=ripple] canvas {
+  top: 0;
+  left: 0;
+}
+
+[paper-button] [f-id=content] {
+  /* needed to position the ink behind the content */
+  position: relative;
+}
+
+[paper-button] [f-id=content] > span {
+  display: inline-block;
+  margin: 0.5em;
+}
