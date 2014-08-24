@@ -1,0 +1,42 @@
+{
+  "name": "flight-element",
+  "main": "flight-element.js",
+  "version": "0.1.2",
+  "license": "MIT",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "flight",
+    "webcomponents",
+    "directive",
+    "element",
+    "tag"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "flight": "~1.2.0"
+  },
+  "devDependencies": {
+    "expect": "~0.3.1",
+    "mocha-flight": "~0.3.0"
+  },
+  "homepage": "https://github.com/nkzawa/flight-element",
+  "_release": "0.1.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.1.2",
+    "commit": "7177b5bf040306a83897981b1a62584f10a6659c"
+  },
+  "_source": "git://github.com/nkzawa/flight-element.git",
+  "_target": "~0.1.2",
+  "_originalSource": "flight-element"
+}
