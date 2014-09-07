@@ -4,9 +4,9 @@
 	else if(typeof define === 'function' && define.amd)
 		define(["flight-element", "flight/lib/component", "flight-with-node-properties"], factory);
 	else if(typeof exports === 'object')
-		exports["FlightPaperButton"] = factory(require("flightElement"), require("flight")["component"], require("FlightWithNodeProperties"));
+		exports["FlightPaperButton"] = factory(require("flightElement"), require("flight")["component"], require("flightWithNodeProperties"));
 	else
-		root["FlightPaperButton"] = factory(root["flightElement"], root["flight"]["component"], root["FlightWithNodeProperties"]);
+		root["FlightPaperButton"] = factory(root["flightElement"], root["flight"]["component"], root["flightWithNodeProperties"]);
 })(this, function(__WEBPACK_EXTERNAL_MODULE_1__, __WEBPACK_EXTERNAL_MODULE_5__, __WEBPACK_EXTERNAL_MODULE_6__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
