@@ -25,6 +25,7 @@
   "dependencies": {
     "flight": "~1.2.0",
     "flight-element": "~0.1.2",
+    "flight-with-node-properties": "~0.1.2",
     "jquery": "~1.11.1"
   },
   "devDependencies": {

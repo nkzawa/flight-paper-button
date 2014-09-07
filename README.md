@@ -18,10 +18,10 @@ Once attached, you can interact with node object directly like Web Components.
 
 ```js
 // set label
-node.setAttribute('label', 'foo');
+this.node.setAttribute('label', 'foo');
 
 // set z-depth of shadow
-node.z = 2;
+this.node.z = 2;
 ```
 
 ## Demo

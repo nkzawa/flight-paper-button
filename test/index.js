@@ -17,7 +17,8 @@
       text: 'bower_components/requirejs-text/text',
       css: 'bower_components/require-css/css',
       flight: 'bower_components/flight',
-      'flight-element': 'bower_components/flight-element/flight-element'
+      'flight-element': 'bower_components/flight-element/flight-element',
+      'flight-with-node-properties': 'bower_components/flight-with-node-properties/flight-with-node-properties'
     },
 
     // dynamically load all test files

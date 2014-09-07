@@ -18,6 +18,12 @@ module.exports = {
       commonjs2: 'flight-element',
       commonjs: 'flightElement',
       amd: 'flight-element'
+    },
+    'flight-with-node-properties': {
+      root: 'FlightWithNodeProperties',
+      commonjs2: 'flight-with-node-properties',
+      commonjs: 'FlightWithNodeProperties',
+      amd: 'flight-with-node-properties'
     }
   },
   resolveLoader: {
