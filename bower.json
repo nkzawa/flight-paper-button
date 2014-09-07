@@ -1,7 +1,7 @@
 {
   "name": "flight-paper-button",
   "main": "flight-paper-button.js",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "moduleType": [
     "amd",
@@ -25,6 +25,7 @@
   "dependencies": {
     "flight": "~1.2.0",
     "flight-element": "~0.1.2",
+    "flight-with-node-properties": "~0.1.2",
     "jquery": "~1.11.1"
   },
   "devDependencies": {

@@ -1,13 +1,13 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("flight-element"), require("flight")["component"]);
+		module.exports = factory(require("flight-element"), require("flight")["component"], require("flight-with-node-properties"));
 	else if(typeof define === 'function' && define.amd)
-		define(["flight-element", "flight/lib/component"], factory);
+		define(["flight-element", "flight/lib/component", "flight-with-node-properties"], factory);
 	else if(typeof exports === 'object')
-		exports["FlightPaperButton"] = factory(require("flightElement"), require("flight")["component"]);
+		exports["FlightPaperButton"] = factory(require("flightElement"), require("flight")["component"], require("FlightWithNodeProperties"));
 	else
-		root["FlightPaperButton"] = factory(root["flightElement"], root["flight"]["component"]);
-})(this, function(__WEBPACK_EXTERNAL_MODULE_1__, __WEBPACK_EXTERNAL_MODULE_5__) {
+		root["FlightPaperButton"] = factory(root["flightElement"], root["flight"]["component"], root["FlightWithNodeProperties"]);
+})(this, function(__WEBPACK_EXTERNAL_MODULE_1__, __WEBPACK_EXTERNAL_MODULE_5__, __WEBPACK_EXTERNAL_MODULE_6__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -54,12 +54,12 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = (function(require) {
+var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require) {
   'use strict';
 
   __webpack_require__(2);
   __webpack_require__(3);
-  __webpack_require__(10);
+  __webpack_require__(9);
 
   var element = __webpack_require__(1);
   var Focusable = __webpack_require__(4);
@@ -152,7 +152,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = (function(re
       this.initializeNodeProperties();
     });
   }
-}.call(exports, __webpack_require__, exports, module)), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 
 
 /***/ },
@@ -165,10 +165,10 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_1__;
 /* 2 */
 /***/ function(module, exports, __webpack_require__) {
 
-var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = (function(require) {
+var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require) {
   'use strict';
 
-  __webpack_require__(12);
+  __webpack_require__(11);
 
   var defineComponent = __webpack_require__(5);
   var element = __webpack_require__(1);
@@ -503,17 +503,17 @@ var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = (function(re
       this.initializeNodeProperties();
     });
   }
-}.call(exports, __webpack_require__, exports, module)), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 
 
 /***/ },
 /* 3 */
 /***/ function(module, exports, __webpack_require__) {
 
-var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = (function(require) {
+var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require) {
   'use strict';
 
-  __webpack_require__(14);
+  __webpack_require__(13);
 
   var defineComponent = __webpack_require__(5);
   var element = __webpack_require__(1);
@@ -638,17 +638,17 @@ var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = (function(re
       this.initializeNodeProperties();
     });
   }
-}.call(exports, __webpack_require__, exports, module)), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 
 
 /***/ },
 /* 4 */
 /***/ function(module, exports, __webpack_require__) {
 
-var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = (function(require) {
+var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require) {
   'use strict';
 
-  __webpack_require__(16);
+  __webpack_require__(15);
 
   var defineComponent = __webpack_require__(5);
   var element = __webpack_require__(1);
@@ -732,7 +732,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = (function(re
       this.on('contextmenu', this.contextMenuAction);
     });
   }
-}.call(exports, __webpack_require__, exports, module)), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 
 
 /***/ },
@@ -745,48 +745,13 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_5__;
 /* 6 */
 /***/ function(module, exports, __webpack_require__) {
 
-var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = (function(require) {
-  'use strict';
-
-  var properties = __webpack_require__(9);
-
-  function withNodeProperties() {
-    this.nodeProperties = function(props) {
-      this.nodePropDef = this.nodePropDef || {};
-      this.nodePropDef.publish = this.nodePropDef.publish || {};
-
-      for (var name in props) {
-        if ('publish' !== name) {
-          this.nodePropDef[name] = props[name];
-          continue;
-        }
-
-        var publish = props.publish || {};
-        for (var n in publish) {
-          this.nodePropDef.publish[n] = publish[n];
-        }
-      }
-    };
-
-    this.initializeNodeProperties = function() {
-      properties(this.node, this.nodePropDef, function(name, oldValue, newValue) {
-        var method = this[name + 'Changed'];
-        if ('function' === typeof method) {
-          method.call(this, oldValue, newValue);
-        }
-      }.bind(this));
-    };
-  }
-
-  return withNodeProperties;
-}.call(exports, __webpack_require__, exports, module)), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-
+module.exports = __WEBPACK_EXTERNAL_MODULE_6__;
 
 /***/ },
 /* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
-var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = (function(require) {
+var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require) {
   'use strict';
   // https://github.com/darius/requestAnimationFrame
 
@@ -825,7 +790,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = (function(re
   }
 
   return raf;
-}.call(exports, __webpack_require__, exports, module)), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 
 
 /***/ },
@@ -838,259 +803,9 @@ module.exports = "<div f-id=\"shadow-container\" style=\"display:none\">\n  <div
 /* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
-var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = (function(require) {
-  'use strict';
-
-  var undefined = void 0;
-
-  var hasAttributeSynch = (function() {
-    var element = document.createElement('div');
-    element.a = 'b';
-    return element.getAttribute('a') === 'b';
-  })();
-
-
-  function property(element, name, options, handler) {
-    observeProperty(element, name, options, handler);
-    if (options.publish) {
-      observeAttribute(element, name, options);
-    }
-  }
-
-  function polyfil(element) {
-    if (!element.setAttribute._polyfilled) {
-      var setAttribute = element.setAttribute;
-      defineProperty(element, 'setAttribute', function(name, value) {
-        changeAttribute(element, name, value, setAttribute);
-      });
-      element.setAttribute._polyfilled = true;
-    }
-
-    if (!element.removeAttribute._polyfilled) {
-      var removeAttribute = element.removeAttribute;
-      defineProperty(element, 'removeAttribute', function(name) {
-        changeAttribute(element, name, null, removeAttribute);
-      });
-      element.removeAttribute._polyfilled = true;
-    }
-  }
-
-  function changeAttribute(element, name, value, operation) {
-    name = name.toLowerCase();
-    var oldValue = element.getAttribute(name);
-    operation.call(element, name, value);
-    var newValue = element.getAttribute(name);
-    if (element.attributeChangedCallback && newValue !== oldValue) {
-      element.attributeChangedCallback(name, oldValue, newValue);
-    }
-  }
-
-  function observeProperty(element, name, options, handler) {
-    var value;
-    var reflectRequired = hasAttributeSynch && options.publish && element.hasAttribute(name);
-    if (reflectRequired) {
-      var attr = element.getAttribute(name);
-    }
-
-    Object.defineProperty(element, name, {
-      get: function() {
-        return value;
-      },
-      set: function(newValue) {
-        if (value === newValue) return;
-
-        var oldValue = value;
-        value = newValue;
-
-        if (options.reflect) {
-          reflectAttribute(element, name, options.serialize(newValue));
-        }
-        if (handler) {
-          handler(name, oldValue, newValue);
-        }
-      },
-      configurable: true
-    });
-
-    if (reflectRequired) {
-      // put back the attribute
-      reflectAttribute(element, name, attr);
-    }
-  }
-
-  function observeAttribute(element, name, options) {
-    var published = element._published;
-    if (!published) {
-      defineProperty(element, '_published', {});
-      published = element._published;
-    }
-
-    published[name.toLowerCase()] = {
-      name: name,
-      deserialize: options.deserialize
-    };
-
-    if (!element.attributeChangedCallback) {
-      defineProperty(element, 'attributeChangedCallback', function(name, oldValue, newValue) {
-        if (name === 'class' || name === 'style') return;
-
-        var definition = published[name];
-        if (!definition) return;
-
-        var value = definition.deserialize(newValue);
-        if (value !== this[definition.name]) {
-          this[definition.name] = value;
-        }
-      });
-    }
-  }
-
-  var defineProperty;
-
-  if (hasAttributeSynch) {
-    defineProperty = function(element, name, value) {
-      // define value as a function not to synch with attribute.
-      Object.defineProperty(element, name, {
-        get: function() { return value; },
-        configurable: true
-      });
-    };
-  } else {
-    defineProperty = function(element, name, value) {
-      element[name] = value;
-    };
-  }
-
-  var reflectAttribute;
-
-  if (hasAttributeSynch) {
-    reflectAttribute = function(element, name, value) {
-      var attrName = name.toUpperCase();
-      if (attrName === name) {
-        attrName = name.toLowerCase();
-      }
-
-      // set the attribute through the property.
-      if ('undefined' !== typeof value) {
-        element[attrName] = value;
-      } else {
-        if (attrName in element) {
-          delete element[attrName];
-        }
-      }
-    };
-  } else {
-    reflectAttribute = function(element, name, value) {
-      if ('undefined' !== typeof value) {
-        element.setAttribute(name, value);
-      } else {
-        element.removeAttribute(name);
-      }
-    };
-  }
-
-  function serialize(value) {
-    switch (typeof value) {
-    case 'object':
-    case 'function':
-    case 'undefined':
-      return;
-    case 'boolean':
-      return value ? '' : undefined;
-    default:
-      return value;
-    }
-  }
-
-  function deserialize(value) {
-    switch (typeof value) {
-    case 'undefined':
-      return;
-    case 'boolean':
-      return value || undefined;
-    default:
-      return '' === value ? true : value;
-    }
-  }
-
-  function parseDefinitions(definitions) {
-    var parsed = {};
-
-    for (var name in definitions) {
-      if ('publish' !== name) {
-        parsed[name] = {
-          value: definitions[name],
-          publish: false,
-          reflect: false
-        };
-        continue;
-      }
-
-      var publish = definitions.publish;
-      for (var n in publish) {
-        var reflect = false;
-        var value = publish[n];
-        if (value && 'undefined' !== typeof value.value) {
-          reflect = !!value.reflect;
-          value = value.value;
-        }
-        parsed[n] = {
-          value: value,
-          publish: true,
-          reflect: reflect
-        };
-      }
-    }
-
-    return parsed;
-  }
-
-  return function(element, definitions, options, handler) {
-    if ('function' === typeof options) {
-      handler = options;
-      options = {};
-    }
-
-    polyfil(element);
-
-    var _definitions = parseDefinitions(definitions);
-    var _serialize = options.serialize || serialize;
-    var _deserialize = options.deserialize || deserialize;
-
-    // prepare properties
-    for (var name in _definitions) {
-      var definition = _definitions[name];
-      property(element, name, {
-        publish: definition.publish,
-        reflect: definition.publish && definition.reflect,
-        serialize: _serialize,
-        deserialize: _deserialize
-      }, handler);
-    }
-
-    // assign default values
-    for (var name in _definitions) {
-      var definition = _definitions[name];
-      if (definition.publish && element.hasAttribute(name)) {
-        element[name] = _deserialize(element.getAttribute(name));
-        continue;
-      }
-
-      if ('undefined' === typeof element[name]) {
-        element[name] = definition.value;
-      }
-    }
-  };
-}.call(exports, __webpack_require__, exports, module)), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-
-
-/***/ },
-/* 10 */
-/***/ function(module, exports, __webpack_require__) {
-
 // style-loader: Adds some css to the DOM by adding a <style> tag
-var update = __webpack_require__(18)(
-	__webpack_require__(11)
+var update = __webpack_require__(17)(
+	__webpack_require__(10)
 );
 // Hot Module Replacement
 if(false) {
@@ -1101,19 +816,19 @@ if(false) {
 }
 
 /***/ },
-/* 11 */
+/* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
 module.exports =
 	"[paper-button] {\n  display: inline-block;\n  position: relative;\n  border: 0;\n  background: transparent;\n  text-align: center;\n  font: inherit;\n  text-transform: uppercase;\n  outline: none;\n  border-radius: 3px;\n  -webkit-user-select: none;\n  user-select: none;\n  cursor: pointer;\n}\n\n[paper-button].hover:hover {\n  background: #e4e4e4;\n}\n\n[paper-button][raisedButton] {\n  background: #dfdfdf;\n}\n\n[paper-button][raisedButton].hover:hover {\n  background: #d6d6d6;\n}\n\n[paper-button][disabled] {\n  background: #eaeaea !important;\n  color: #a8a8a8 !important;\n  cursor: auto;\n}\n\n[paper-button] [f-id=shadow-container] {\n  border-radius: inherit;\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n}\n\n[paper-button] [f-id=clip] {\n  position: relative;\n  border-radius: inherit;\n  overflow: hidden;\n}\n\n[paper-button] [f-id=ripple] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  right: 0;\n  color: #d1d1d1;\n  pointer-events: none;\n}\n\n[paper-button][raisedButton] [f-id=ripple] {\n  color: #cecece;\n}\n\n[paper-button] [f-id=ripple] canvas {\n  top: 0;\n  left: 0;\n}\n\n[paper-button] [f-id=content] {\n  /* needed to position the ink behind the content */\n  position: relative;\n}\n\n[paper-button] [f-id=content] > span {\n  display: inline-block;\n  margin: 0.5em;\n}\n";
 
 /***/ },
-/* 12 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
-var update = __webpack_require__(18)(
-	__webpack_require__(13)
+var update = __webpack_require__(17)(
+	__webpack_require__(12)
 );
 // Hot Module Replacement
 if(false) {
@@ -1124,19 +839,19 @@ if(false) {
 }
 
 /***/ },
-/* 13 */
+/* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
 module.exports =
 	"[paper-ripple] {\n  display: block;\n  position: relative;\n}\n\n[paper-ripple] > canvas {\n  pointer-events: none;\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n}\n\n[paper-ripple].circle > canvas {\n  border-radius: 50%;\n}\n";
 
 /***/ },
-/* 14 */
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
-var update = __webpack_require__(18)(
-	__webpack_require__(15)
+var update = __webpack_require__(17)(
+	__webpack_require__(14)
 );
 // Hot Module Replacement
 if(false) {
@@ -1147,19 +862,19 @@ if(false) {
 }
 
 /***/ },
-/* 15 */
+/* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
 module.exports =
 	".paper-shadow {\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  right: 0;\n  border-radius: inherit;\n  pointer-events: none;\n}\n\n.paper-shadow-animated.paper-shadow {\n  transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);\n}\n\n.paper-shadow-top-z-1 {\n  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16);\n}\n\n.paper-shadow-bottom-z-1 {\n  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);\n}\n\n.paper-shadow-top-z-2 {\n  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);\n}\n\n.paper-shadow-bottom-z-2 {\n  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);\n}\n\n.paper-shadow-top-z-3 {\n  box-shadow: 0 17px 50px 0 rgba(0, 0, 0, 0.19);\n}\n\n.paper-shadow-bottom-z-3 {\n  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24);\n}\n\n.paper-shadow-top-z-4 {\n  box-shadow: 0 25px 55px 0 rgba(0, 0, 0, 0.21);\n}\n\n.paper-shadow-bottom-z-4 {\n  box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22);\n}\n\n.paper-shadow-top-z-5 {\n  box-shadow: 0 40px 77px 0 rgba(0, 0, 0, 0.22);\n}\n\n.paper-shadow-bottom-z-5 {\n  box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2);\n}\n\n.paper-shadow-animate-z-1-z-2.paper-shadow-top {\n  -webkit-transition: none;\n  -webkit-animation: animate-shadow-top-z-1-z-2 0.7s infinite alternate;\n}\n\n.paper-shadow-animate-z-1-z-2 .paper-shadow-bottom {\n  -webkit-transition: none;\n  -webkit-animation: animate-shadow-bottom-z-1-z-2 0.7s infinite alternate;\n}\n\n@-webkit-keyframes animate-shadow-top-z-1-z-2 {\n  0% {\n    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16);\n  }\n  100% {\n    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);\n  }\n}\n\n@-webkit-keyframes animate-shadow-bottom-z-1-z-2 {\n  0% {\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);\n  }\n  100% {\n    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);\n  }\n}\n";
 
 /***/ },
-/* 16 */
+/* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
-var update = __webpack_require__(18)(
-	__webpack_require__(17)
+var update = __webpack_require__(17)(
+	__webpack_require__(16)
 );
 // Hot Module Replacement
 if(false) {
@@ -1170,14 +885,14 @@ if(false) {
 }
 
 /***/ },
-/* 17 */
+/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
 module.exports =
 	"[paper-focusable][disabled] {\n  pointer-events: none;\n}\n";
 
 /***/ },
-/* 18 */
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
 /*
@@ -1188,9 +903,9 @@ module.exports = function addStyle(cssCode) {
 	if(false) {
 		if(typeof document !== "object") throw new Error("The style-loader cannot be used in a non-browser environment");
 	}
-	var styleElement = document.createElement("style");
+	var styleElement = document.createElement("style"),
+		head = document.head || document.getElementsByTagName("head")[0];
 	styleElement.type = "text/css";
-	var head = document.getElementsByTagName("head")[0];
 	head.appendChild(styleElement);
 	if (styleElement.styleSheet) {
 		styleElement.styleSheet.cssText = cssCode;
@@ -1206,11 +921,18 @@ module.exports = function addStyle(cssCode) {
 					styleElement.childNodes[0].nodeValue = cssCode;
 				}
 			} else {
-				head.removeChild(styleElement);
+				dispose();
 			}
 		};
+	} else {
+		// For the useable API, provide a function to remove the stylesheet.
+		return dispose;
 	}
-}
+
+	function dispose() {
+		head.removeChild(styleElement);
+	}
+};
 
 
 /***/ }
