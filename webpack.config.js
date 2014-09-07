@@ -20,9 +20,9 @@ module.exports = {
       amd: 'flight-element'
     },
     'flight-with-node-properties': {
-      root: 'FlightWithNodeProperties',
+      root: 'flightWithNodeProperties',
       commonjs2: 'flight-with-node-properties',
-      commonjs: 'FlightWithNodeProperties',
+      commonjs: 'flightWithNodeProperties',
       amd: 'flight-with-node-properties'
     }
   },
