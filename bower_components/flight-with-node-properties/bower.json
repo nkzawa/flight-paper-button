@@ -1,0 +1,32 @@
+{
+  "name": "flight-with-node-properties",
+  "main": "flight-with-node-properties.js",
+  "version": "0.1.1",
+  "license": "MIT",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "flight",
+    "element",
+    "properties",
+    "attribute"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "flight": "~1.2.0"
+  },
+  "devDependencies": {
+    "expect": "~0.3.1",
+    "mocha-flight": "~0.3.0",
+    "element-properties": "0.1.0"
+  }
+}

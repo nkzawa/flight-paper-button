@@ -1,0 +1,42 @@
+{
+  "name": "flight-with-node-properties",
+  "main": "flight-with-node-properties.js",
+  "version": "0.1.2",
+  "license": "MIT",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "flight",
+    "element",
+    "properties",
+    "attribute"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "flight": "~1.2.0"
+  },
+  "devDependencies": {
+    "expect": "~0.3.1",
+    "mocha-flight": "~0.3.0",
+    "element-properties": "0.1.0"
+  },
+  "homepage": "https://github.com/nkzawa/flight-with-node-properties",
+  "_release": "0.1.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.1.2",
+    "commit": "8df7b6877aa69a73a73eef894d5055bce5adacb1"
+  },
+  "_source": "git://github.com/nkzawa/flight-with-node-properties.git",
+  "_target": "~0.1.2",
+  "_originalSource": "flight-with-node-properties"
+}
