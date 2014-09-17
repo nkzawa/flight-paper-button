@@ -8,20 +8,22 @@ paper-button component build on top of Flight and [flight-element](https://githu
 <span f-is="paper-button" label="button" raisedButton></span>
 ```
 
-OR:
+Alternatively, you can attach the component manually:
 
 ```js
-FlightPaperButton.attachTo('#paper-button');
+FlightPaperButton.attachTo('.paper-button');
 ```
 
-Once attached, you can interact with node object directly like Web Components.
+Once attached, you can interact with the node object directly like Web Components.
 
 ```js
+var buttonNode = $('.paper-button')[0];
+
 // set label
-this.node.setAttribute('label', 'foo');
+buttonNode.setAttribute('label', 'foo');
 
 // set z-depth of shadow
-this.node.z = 2;
+buttonNode.z = 2;
 ```
 
 ## Demo
